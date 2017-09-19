@@ -2,17 +2,25 @@
   {
     "name": "CRUD Mongoose",
     "repo": "https://github.com/facundofernandez/mongoose-CRUD-Libros.git",
-    "dir": "repo",
-    "branch": "master",
-    "user": "facundofernandez",
-    "pass": "facu91956"
+    "dir": "/Users/ffernandez/Documents/archivos/proyectos/",
+    "branch": "master"
   },
   {
     "name": "instagramPortal",
     "repo": "https://github.com/facundofernandez/instagramPortal.git",
-    "dir": "repo",
-    "branch": "master",
-    "user": "facundofernandez",
-    "pass": "facu91956"
+    "dir": "/Users/ffernandez/Documents/archivos/proyectos/",
+    "branch": "master"
+  },
+  {
+    "name": "Git Automatic Pull",
+    "repo": "https://github.com/facundofernandez/gitAutomaticPush.git",
+    "dir": "/Users/ffernandez/Documents/archivos/proyectos/",
+    "branch": "master"
+  },
+  {
+    "name": "Blog Ghost",
+    "repo": "https://github.com/facundofernandez/ghost.git",
+    "dir": "/Users/ffernandez/Documents/archivos/proyectos/",
+    "branch": "master"
   }
 ]

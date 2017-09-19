@@ -1,20 +1,19 @@
-const 
-  express   = require('express'),
-  app       = express(),
-  path      = require('path'),
-  repoCtrl  = require('./my_modules/repo');
+'use strict';
 
-app.post('/:nameApp', (req,res)=>{
-  
-  let nameRepo = req.params.nameApp;
+const
+    express    = require('express'),
+    app        = express(),
+    repoCtrl   = require('./my_modules/repo'),
+    auth       = require('./middlewares/auth'),
+    bodyParser = require('body-parser');
 
-  console.log(repoCtrl.existRepo(nameRepo));
 
-  // let repo = repoCtrl.getRepoByName(nameRepo);
-  // let dir = path.join(__dirname,repo.dir,nameRepo);
-  
- 
-  //repoCtrl.pull('master',dir)
-});
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+//app.post('/:nameApp',auth, repoCtrl.pull);
+app.post('/:nameApp', repoCtrl.pull);
+app.get('/:nameApp/getRepoConfig', repoCtrl.getRepoConfig);
+app.get('/getRepoConfig', repoCtrl.getAllRepoConfig);
 
 module.exports = app;
