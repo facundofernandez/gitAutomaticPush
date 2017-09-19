@@ -1,15 +1,20 @@
 const 
-  express = require('express'),
-  app     = express();
-
-  const path = require('path');
-  const repoCtrl = require('./my_modules/repo');
+  express   = require('express'),
+  app       = express(),
+  path      = require('path'),
+  repoCtrl  = require('./my_modules/repo');
 
 app.post('/:nameApp', (req,res)=>{
-  let nameRepo = 'instagramPortal';
-  let repo = repoCtrl.getRepoByName(nameRepo);
   
-  let dir = path.join(__dirname,repo.dir,nameRepo)
+  let nameRepo = req.params.nameApp;
+
+  console.log(repoCtrl.existRepo(nameRepo));
+
+  // let repo = repoCtrl.getRepoByName(nameRepo);
+  // let dir = path.join(__dirname,repo.dir,nameRepo);
+  
+ 
+  //repoCtrl.pull('master',dir)
 });
 
 module.exports = app;
